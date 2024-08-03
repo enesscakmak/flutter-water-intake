@@ -134,6 +134,29 @@ class _HomePageState extends State<HomePage> {
                   ),
           ],
         ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primary),
+                  child: Text(
+                    "Daily Water Tracker",
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        fontWeight: FontWeight.bold, color: Colors.white),
+                  )),
+              ListTile(
+                title: Text('Settings'),
+                onTap:() {
+                  
+                } ,
+              ),
+              ListTile(
+                title: Text('About'),
+              )
+            ],
+          ),
+        ),
         backgroundColor: Theme.of(context).colorScheme.background,
         floatingActionButton: FloatingActionButton(
           onPressed: addWater,
