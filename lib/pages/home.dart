@@ -99,7 +99,6 @@ class _HomePageState extends State<HomePage> {
       builder: (context, value, child) => Scaffold(
         appBar: AppBar(
           actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.map))],
-          elevation: 4,
           centerTitle: true,
           title: const Text('Water Intake'),
         ),

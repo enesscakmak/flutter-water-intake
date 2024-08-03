@@ -110,4 +110,22 @@ class WaterData extends ChangeNotifier {
 
     notifyListeners();
   }
+
+  String calculateWeeklyWaterIntake(WaterData value) {
+    double weeklyWaterIntake = 0;
+    for (var water in value.waterDataList) {
+      weeklyWaterIntake += double.parse(water.amount.toString());
+    }
+    return weeklyWaterIntake.toStringAsFixed(1);
+  }
+
+  Map<String, double> calculateDailyWaterSummary() {
+    Map<String, double> dailyWaterSummary = {};
+
+    for (var water in waterDataList) {
+      String date = convertDateTimeToString(water.dateTime);
+    }
+  }
+
+
 }
