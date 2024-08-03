@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:water_intake/model/water_model.dart';
 import 'package:http/http.dart' as http;
+import 'package:water_intake/utils/date_helper.dart';
 
 class WaterData extends ChangeNotifier {
   List<WaterModel> waterDataList = [];
@@ -124,8 +125,15 @@ class WaterData extends ChangeNotifier {
 
     for (var water in waterDataList) {
       String date = convertDateTimeToString(water.dateTime);
+      double amount = double.parse(water.amount.toString());
+
+      if (dailyWaterSummary.containsKey(date)) {
+        double currentAmount = dailyWaterSummary[date]!;
+        currentAmount += amount;
+      } else {
+        dailyWaterSummary.addAll({date: amount});
+      }
     }
+    return dailyWaterSummary;
   }
-
-
 }
