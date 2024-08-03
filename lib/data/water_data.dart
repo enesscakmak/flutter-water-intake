@@ -128,6 +128,7 @@ class WaterData extends ChangeNotifier {
       double amount = double.parse(water.amount.toString());
 
       if (dailyWaterSummary.containsKey(date)) {
+        // ignore: unused_local_variable
         double currentAmount = dailyWaterSummary[date]!;
         currentAmount += amount;
       } else {
