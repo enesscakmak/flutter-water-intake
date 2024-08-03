@@ -100,7 +100,22 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.map))],
           centerTitle: true,
-          title: const Text('Water Intake'),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Weekly: ',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              Text(
+                '${value.calculateWeeklyWaterIntake(value)} ml',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium!
+                    .copyWith(fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
         ),
         body: ListView(
           children: [
