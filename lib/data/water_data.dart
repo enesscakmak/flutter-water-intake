@@ -58,4 +58,15 @@ class WaterData extends ChangeNotifier {
     notifyListeners();
     return waterDataList;
   }
+
+  void delete(WaterModel waterModel) {
+    final url = Uri.https(
+        'water-intaker-3633a-default-rtdb.europe-west1.firebasedatabase.app',
+        'water/${waterModel.id}.json');
+    http.delete(url);
+
+    waterDataList.removeWhere((element) => element.id == waterModel.id!);
+
+    notifyListeners();
+  }
 }

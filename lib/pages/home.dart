@@ -29,6 +29,8 @@ class _HomePageState extends State<HomePage> {
     if (!context.mounted) {
       return; // if widget is not mounted don't do anything
     }
+
+    clearWater();
   }
 
   void addWater() {
@@ -93,5 +95,9 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  void clearWater() {
+    amountController.clear();
   }
 }
