@@ -1,16 +1,21 @@
-# water_intake
+# Daily Water Tracker
 
-A new Flutter project.
+A Water Tracker project using Realtime Database from Firebase for learning Flutter that let's you ⤵  
 
-## Getting Started
+  - Enter that day's water intake amount
+  - See your entries by day and hour
+  - Easily see the week's comparison with a graph
+  - See the total amount of water for that week
+  - Get to Settings or About menu easily with a hamburger menu
+  - See user details from the menu
+    
 
-This project is a starting point for a Flutter application.
+<p align="center">
+<img width="30%" height="40%" src="https://github.com/user-attachments/assets/c9d2db14-9de4-478a-bb07-e9e4f3af275e">
+             
 
-A few resources to get you started if this is your first Flutter project:
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+    Made with the help of "Flutter & Dart: Complete App Development Course" by Paulo Dichone
