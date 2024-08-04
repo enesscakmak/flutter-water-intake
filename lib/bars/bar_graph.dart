@@ -44,10 +44,10 @@ class BarGraph extends StatelessWidget {
           borderData: FlBorderData(show: false),
           titlesData: FlTitlesData(
               show: true,
-              topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-              leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+              topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+              leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
               rightTitles:
-                  AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                  const AxisTitles(sideTitles: SideTitles(showTitles: false)),
               bottomTitles: AxisTitles(
                   sideTitles: SideTitles(
                       showTitles: true,

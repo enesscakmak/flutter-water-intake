@@ -24,13 +24,13 @@ class WaterTile extends StatelessWidget {
               color: Colors.blue,
             ),
             Text(
-              '${waterModel.amount.toStringAsFixed(2)} ml',
+              '${waterModel.amount.toStringAsFixed(0)} ml',
               style: Theme.of(context).textTheme.titleMedium,
             ),
           ],
         ),
         subtitle: Text(
-            '${waterModel.dateTime.day}/${waterModel.dateTime.month}/${waterModel.dateTime.year}'),
+            'Date: ${waterModel.dateTime.day}/${waterModel.dateTime.month}/${waterModel.dateTime.year}\nTime: ${waterModel.dateTime.hour}:${waterModel.dateTime.minute} '),
         trailing: IconButton(
           icon: const Icon(Icons.delete),
           onPressed: () {
